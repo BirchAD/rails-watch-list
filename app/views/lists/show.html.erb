@@ -19,13 +19,21 @@
             <%= link_to "Delete",
             bookmark_path(bookmark),
             data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}, class: "btn btn-primary"%>
+            <%= link_to "Add review", new_bookmark_review_path(bookmark), class: "btn btn-primary" %>
+              <% bookmark.reviews.each do |review| %>
+            <ul class ="list-group mt-3">
+                <li class="list-group-item">
+                  <p> <%="⭐️" * 4 %>
+                  <p> <%= review.content%> </p>
+                </li>
+              <% end %>
+            </ul>
           </div>
         </div>
       </div>
         <% end %>
   </div>
 <%= simple_form_for [@list, @bookmark] do |f| %>
-  <%= f.input :comment %>
   <%= f.association :movie %>
   <%= f.button :submit %>
 <% end %>

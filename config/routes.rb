@@ -4,5 +4,7 @@ Rails.application.routes.draw do
     resources :bookmarks, only: %i[create]
   end
 
-  resources :bookmarks, only: [:destroy]
+  resources :bookmarks, only: %i[destroy show] do
+    resources :reviews, only: %i[new create]
+  end
 end
