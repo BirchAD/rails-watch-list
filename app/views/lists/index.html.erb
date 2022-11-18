@@ -4,7 +4,7 @@
 <div class="container">
   <div class="row">
     <% @lists.each do |list| %>
-      <div class="col-sm-6">
+      <div class="col-auto d-flex">
         <div class="card" style="width: 18rem;">
             <div class="card-body">
               <img class="card-img-top" src="<%= cl_image_path list.photo.key, crop: :fill %>" alt="movie image">
