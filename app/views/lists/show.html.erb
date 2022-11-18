@@ -23,7 +23,7 @@
               <% bookmark.reviews.each do |review| %>
             <ul class ="list-group mt-3">
                 <li class="list-group-item">
-                  <p> <%="⭐️" * 4 %>
+                  <p> <%="⭐️" * review.rating %>
                   <p> <%= review.content%> </p>
                 </li>
               <% end %>
