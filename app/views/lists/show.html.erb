@@ -22,7 +22,10 @@
           </div>
         </div>
       </div>
-                <% end %>
-                <%= link_to 'Add a movie', new_list_bookmark_path(@list), class: "btn btn-primary" %>
+        <% end %>
   </div>
-</div>
+<%= simple_form_for [@list, @bookmark] do |f| %>
+  <%= f.input :comment %>
+  <%= f.association :movie %>
+  <%= f.button :submit %>
+<% end %>
