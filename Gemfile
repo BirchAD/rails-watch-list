@@ -27,6 +27,8 @@ gem "stimulus-rails"
 # Build JSON APIs with ease [https://github.com/rails/jbuilder]
 gem "jbuilder"
 
+gem 'json', '~> 2.6', '>= 2.6.2'
+
 # Use Redis adapter to run Action Cable in production
 # gem "redis", "~> 4.0"
 
@@ -42,6 +44,8 @@ gem "tzinfo-data", platforms: %i[ mingw mswin x64_mingw jruby ]
 # Reduces boot times through caching; required in config/boot.rb
 gem "bootsnap", require: false
 
+gem 'open-uri'
+
 gem "autoprefixer-rails"
 
 gem "font-awesome-sass", "~> 6.1"
@@ -49,6 +53,8 @@ gem "font-awesome-sass", "~> 6.1"
 gem "simple_form", github: "heartcombo/simple_form"
 
 gem "sassc-rails"
+
+gem "dotenv-rails", groups: [:development, :test]
 
 # Use Sass to process CSS
 # gem "sassc-rails"

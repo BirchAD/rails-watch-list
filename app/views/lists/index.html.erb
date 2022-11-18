@@ -1,0 +1,12 @@
+<header class="banner">
+  <h1 class> My Lists: </h1>
+</header>
+<section class="container">
+  <ul class="list-group">
+    <% @lists.each do |list| %>
+      <li>
+        <%= link_to list.name, list_path(list) %>
+      </li>
+    <% end %>
+</section>
+</ul>

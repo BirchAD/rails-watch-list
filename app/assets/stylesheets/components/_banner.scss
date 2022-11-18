@@ -1,0 +1,16 @@
+.banner {
+  padding: 60px;
+  text-align: center;
+  background-image: asset-url("movie_banner.jpg");
+  color: rgba(212, 212, 212, 0.83);
+  font-size: 30px;
+  width: 100%;
+  height: 20rem;
+  background-size: cover;
+}
+
+.banner h1 {
+  position: relative;
+    top: 200px;
+  font-weight: bold;
+}
